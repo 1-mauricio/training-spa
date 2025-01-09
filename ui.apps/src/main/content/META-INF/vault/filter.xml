@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/training-spa/clientlibs"/>
+    <filter root="/apps/training-spa/components"/>
+    <filter root="/apps/training-spa/i18n"/>
+</workspaceFilter>
