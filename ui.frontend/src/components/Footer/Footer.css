@@ -1,34 +1,135 @@
-/* Layout Properties */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #1a1f3d;
+  --color-secondary: #dc0a17;
+  --color-text: #000000;
+  --color-white: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+  
+  --container-max-width: 1200px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  
+  --font-primary: 'Montserrat', sans-serif;
+  --font-size-sm: 12px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
 .footer {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  padding: var(--spacing-lg) 0;
+}
+
+.newsletter {
+  background-color: var(--color-primary);
+  padding: var(--spacing-lg);
+  text-align: left;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+.newsletter-form input::placeholder {
+  color: var(--color-white);
+}
+
+.submit-btn {
+  padding: 0.8rem var(--spacing-lg);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.footer-section h3 {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-regular);
+}
+
+.support-info p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-lg);
+}
+
+.footer-bottom p {
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
   }
-  
-  /* Style the header links */
-  .footer h1 {
-    float: center;
-    color: black;
-    /*text-align: center;
-    /*padding: 12px;
-    text-decoration: none;
-    font-size: 25px;
-    line-height: 25px;
-    border-radius: 4px;*/
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .footer h2 {
-    float: center;
-    color: white;
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
   }
-  
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-    .footer h1 {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .footer-right {
-      float: none;
-    }
-  }
+}
