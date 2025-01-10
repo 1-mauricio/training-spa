@@ -20,6 +20,7 @@ import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 import './Header/Header';
 import './Footer/Footer';
+import './Newsletter/Newsletter';
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 

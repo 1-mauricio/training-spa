@@ -15,15 +15,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer">
-              <div className="newsletter">
-                <div className="newsletter-form">
-                <h2>RECEBA OFERTAS E NOVIDADES</h2>
-                  <input type="text" placeholder="Insira seu nome completo" />
-                  <input type="email" placeholder="Insira seu e-mail" />
-                  <button className="submit-btn">ENVIAR</button>
-                </div>
-              </div>
-        
+    
               <div className="footer-content">
                 <div className="footer-section">
                   <h3>CATEGORIAS</h3>

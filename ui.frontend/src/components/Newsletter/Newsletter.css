@@ -1,0 +1,63 @@
+:root {
+    --color-primary: #1a1f3d;
+    --color-secondary: #dc0a17;
+    --color-white: #ffffff;
+    --font-primary: 'Montserrat', sans-serif;
+    --container-max-width: 1200px;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+  }
+  
+  .newsletter {
+    background-color: var(--color-primary);
+    padding: var(--spacing-lg);
+    text-align: left;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    font-family: var(--font-primary);
+  }
+  
+  .newsletter h2 {
+    color: var(--color-white);
+    font-size: 20px;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+  }
+  
+  .newsletter-form input::placeholder {
+    color: var(--color-white);
+  }
+  
+  .submit-btn {
+    padding: 0.8rem var(--spacing-lg);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+  }
+  
