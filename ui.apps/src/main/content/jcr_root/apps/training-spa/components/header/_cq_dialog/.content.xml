@@ -14,20 +14,8 @@
                     <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
-                    <checkbox
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                        text="Checkbox"
-                        uncheckedValue="false"
-                        value="true"
-                        name="./checkbox"/>
-                    <checkboxType
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/form/hidden"
-                        name="./checkbox@TypeHint"
-                        value="Boolean"/>
+                        fieldLabel="Title"
+                        name="./title"/>
                 </items>
             </column>
         </items>

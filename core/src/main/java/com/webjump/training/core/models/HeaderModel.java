@@ -19,15 +19,10 @@ public class HeaderModel implements ComponentExporter {
     protected static final String RESOURCE_TYPE = "training-spa/components/header";
 
     @ValueMapValue(injectionStrategy=InjectionStrategy.OPTIONAL)
-    protected String text;
-    @ValueMapValue(injectionStrategy=InjectionStrategy.OPTIONAL)
-    protected Boolean checkbox;
+    protected String title;
 
-    public String getText() {
-        return text;
-    }
-    public Boolean isCheckbox() {
-        return checkbox;
+    public String getTitle() {
+        return title;
     }
 
     public String getExportedType() {
