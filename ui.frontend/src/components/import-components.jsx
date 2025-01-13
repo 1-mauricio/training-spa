@@ -22,6 +22,7 @@ import './Header/Header';
 import './Footer/Footer';
 import './Newsletter/Newsletter';
 import './Banner/Banner';
+import './Benefits/Benefits';
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
