@@ -1,0 +1,50 @@
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .nav-card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    opacity: 0.3;
+    border-radius: 10px;
+  }
+  
+  .nav-card h2 {
+    color: #FFFFFF;
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width: 1200px) {
+    .main-nav {
+      flex-wrap: wrap;
+    }
+  }
