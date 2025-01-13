@@ -21,6 +21,7 @@ import './ExperienceFragment/ExperienceFragment';
 import './Header/Header';
 import './Footer/Footer';
 import './Newsletter/Newsletter';
+import './Banner/Banner';
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
