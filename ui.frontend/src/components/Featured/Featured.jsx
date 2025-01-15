@@ -6,28 +6,28 @@ const Featured = () => {
   const products = [
     {
       title: 'Adaptador 13 Para 7 Pinos Para Reboque',
-      image: '/content/dam/products/adaptador-13-7.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       rating: 5,
       originalPrice: 'R$88,39',
       salePrice: 'R$64,68'
     },
     {
       title: 'Adaptador 13 Para 7 Pinos Para Reboque',
-      image: '/content/dam/products/adaptador-13-7-2.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       rating: 5,
       originalPrice: 'R$88,39',
       salePrice: 'R$336,60'
     },
     {
       title: 'Chaveiro Tematizado Peças De Carro Automotivo Em Metal',
-      image: '/content/dam/products/chaveiro.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       rating: 5,
       originalPrice: 'R$27,90',
       salePrice: 'R$24,83'
     },
     {
-      title: 'Adaptador 13 Para 7 Pinos Para Reboque',
-      image: '/content/dam/products/adaptador-13-7-3.jpg',
+      title: 'Adaptador 13 Para 7 Pinos Para Reboque',      
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       rating: 5,
       originalPrice: 'R$88,39',
       salePrice: 'R$336,60'
@@ -48,7 +48,9 @@ const Featured = () => {
       <div className="products-grid">
         {products.map((product, index) => (
           <div key={index} className="product-card">
-            <img src={product.image} alt={product.title} />
+            <div className="image-container">
+              <img src={product.image} alt={product.title} />
+            </div>
             <Rating />
             <h3>{product.title}</h3>
             <div className="price">

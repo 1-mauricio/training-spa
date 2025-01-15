@@ -1,16 +1,17 @@
-.header {
+header {
+  height: 7rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem 0;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  align-content: center;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 6.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 
 .header-actions {
@@ -36,7 +37,8 @@
 }
 
 .logo img {
-  height: 40px;
+  width: 125px;
+  height: 82px;
 }
 
 .nav-menu ul {

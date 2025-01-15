@@ -1,12 +1,13 @@
 import React from 'react';
 import { MapTo } from '@adobe/aem-spa-component-mapping';
+import { FaGlobeAmericas, FaTrophy, FaTruck, FaTools } from 'react-icons/fa';
 import './Benefits.css';
 
 const defaultBenefits = [
-  { icon: '/content/dam/icons/globe.svg', text: 'Garantia no mundo inteiro' },
-  { icon: '/content/dam/icons/trophy.svg', text: 'Qualidade Superior' },
-  { icon: '/content/dam/icons/shipping.svg', text: 'Entrega Global' },
-  { icon: '/content/dam/icons/tools.svg', text: 'Programas de Manutenção' },
+  { icon: FaGlobeAmericas, text: 'Garantia no mundo inteiro' },
+  { icon: FaTrophy, text: 'Qualidade Superior' },
+  { icon: FaTruck, text: 'Entrega Global' },
+  { icon: FaTools, text: 'Programas de Manutenção' },
 ];
 
 const Benefits = (props) => {
@@ -16,7 +17,11 @@ const Benefits = (props) => {
     <div className="benefits">
       {items.map((benefit, index) => (
         <div key={index} className="benefit-item">
-          <img src={benefit.icon} alt={benefit.text} />
+          {typeof benefit.icon === 'function' ? (
+            <benefit.icon className="benefit-icon" />
+          ) : (
+            <img src={benefit.icon} alt={benefit.text} className="benefit-icon" />
+          )}
           <span>{benefit.text}</span>
         </div>
       ))}

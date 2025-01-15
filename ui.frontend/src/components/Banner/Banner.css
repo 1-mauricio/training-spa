@@ -1,8 +1,5 @@
 :root {
-    --color-primary: #1a1f3d;
-    --color-secondary: #dc0a17;
     --font-color: #ffffff;
-    --font-primary: 'Montserrat', sans-serif;
   }
   
   .banner {
@@ -22,14 +19,16 @@
   }
   
   .banner-content h1 {
+    margin: 0;
+    margin-bottom: 5px;
     color: var(--font-color);
     text-transform: uppercase;
-    margin-bottom: 2rem;
   }
 
   .first-title {
     font-size: 30px;
-    font-weight: 400;
+    letter-spacing: 12px;
+    font-weight: 100;
   }
 
   .second-title {
@@ -38,12 +37,14 @@
   }
   
   .cta-button {
-    padding: 1rem 2rem;
+    width: 10.75rem;
+    height: 2.625rem;
     background-color: var(--color-secondary);
     color: var(--font-color);
+    border-radius: 10px;
+    font-size: 18px;
     border: none;
-    border-radius: 4px;
-    font-weight: 700;
+    font-weight: 900;
     cursor: pointer;
     text-transform: uppercase;
   }

@@ -2,15 +2,13 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 40px;
-    max-width: 1300px;
-    margin: 0 auto;
+    margin: 4.375rem 6.25rem 6.25rem 6.25rem;
   }
   
   .nav-card {
     position: relative;
-    width: 400px;
-    height: 250px;
+    width: 25rem;
+    height: 15.625rem;
     border-radius: 10px;
     background-size: cover;
     background-position: center;

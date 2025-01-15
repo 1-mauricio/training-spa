@@ -14,7 +14,7 @@ const FooterEditConfig = {
 class Footer extends Component {
     render() {
         return (
-            <footer className="footer">
+            <footer>
     
               <div className="footer-content">
                 <div className="footer-section">

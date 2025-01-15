@@ -13,8 +13,37 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ :root {
+  --color-primary: #14214E;
+  --color-secondary: #C70041;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-dark: #3B3B3B;
+  --color-gray-medium: #9A9A9A;
+  --color-gray-light: #D9D9D9;
+  --color-gray-lighter: #E9E9E9;
+
+  --color-black-transparent: #00000000;
+  --color-black-opacity-light: #00000014;
+  --color-primary-opacity-light: #14214E26;
+
+  --color-accent: #E59900;
+  
+  --container-max-width: 1200px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem 0;
+  
+  --font-primary: 'Montserrat', sans-serif;
+  --font-size-sm: 12px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
 
 .page {
   margin: 0 auto;
-  padding: 12px;
 }

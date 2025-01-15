@@ -15,10 +15,10 @@ const HeaderEditConfig = {
 class Header extends Component {
     render() {
         return (
-            <header className="header">
+            <header>
               <div className="header-container">
                 <div className="logo">
-                  <img src="/truck-logo.png" alt="Truck Transport Logo" />
+                  <img src="/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg" alt="Truck Transport Logo" />
                 </div>
                 
                 <nav className="nav-menu">

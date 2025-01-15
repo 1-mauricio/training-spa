@@ -6,23 +6,23 @@ const MainNav = () => {
   const navItems = [
     {
       title: 'SERVIÇOS',
-      image: '/content/dam/services/engine.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       link: '/servicos'
     },
     {
       title: 'PEÇAS',
-      image: '/content/dam/services/parts.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       link: '/pecas'
     },
     {
       title: 'MANUTENÇÃO',
-      image: '/content/dam/services/maintenance.jpg',
+      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
       link: '/manutencao'
     }
   ];
 
   return (
-    <nav className="main-nav">
+    <div className="main-nav">
       {navItems.map((item, index) => (
         <a 
           key={index} 
@@ -33,7 +33,7 @@ const MainNav = () => {
           <h2>{item.title}</h2>
         </a>
       ))}
-    </nav>
+    </div>
   );
 };
 
