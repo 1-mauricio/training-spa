@@ -29,7 +29,7 @@ const Featured = ({ title = "Em destaque" }) => {
 
   useEffect(() => {
     fetchProducts();
-    const interval = setInterval(fetchProducts, 10000);
+    const interval = setInterval(fetchProducts, 1000);
 
     return () => clearInterval(interval);
   }, []);
