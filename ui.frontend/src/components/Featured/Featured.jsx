@@ -1,38 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapTo } from '@adobe/aem-spa-component-mapping';
 import './Featured.css';
 
-const Featured = () => {
-  const products = [
-    {
-      title: 'Adaptador 13 Para 7 Pinos Para Reboque',
-      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
-      rating: 5,
-      originalPrice: 'R$88,39',
-      salePrice: 'R$64,68'
-    },
-    {
-      title: 'Adaptador 13 Para 7 Pinos Para Reboque',
-      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
-      rating: 5,
-      originalPrice: 'R$88,39',
-      salePrice: 'R$336,60'
-    },
-    {
-      title: 'Chaveiro Tematizado Peças De Carro Automotivo Em Metal',
-      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
-      rating: 5,
-      originalPrice: 'R$27,90',
-      salePrice: 'R$24,83'
-    },
-    {
-      title: 'Adaptador 13 Para 7 Pinos Para Reboque',      
-      image: '/content/dam/core-components-examples/library/sample-assets/mountain-range.jpg',
-      rating: 5,
-      originalPrice: 'R$88,39',
-      salePrice: 'R$336,60'
-    }
-  ];
+const Featured = ({ title = "Em destaque" }) => {
+  const splitTitle = title ? title[0].split(' ') : [];
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchProducts = () => {
+    fetch('/bin/featured/products')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Erro ao buscar produtos');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    fetchProducts();
+    const interval = setInterval(fetchProducts, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const Rating = () => (
     <div className="rating">
@@ -44,21 +44,28 @@ const Featured = () => {
 
   return (
     <section className="featured">
-      <h2 className="featured-title">Em <span>destaque</span></h2>
+      <h2 className="featured-title">
+        {splitTitle[0]} <span>{splitTitle[1]}</span>
+      </h2>
+
       <div className="products-grid">
-        {products.map((product, index) => (
-          <div key={index} className="product-card">
-            <div className="image-container">
-              <img src={product.image} alt={product.title} />
+        {loading ? (
+          <p>Carregando produtos...</p>
+        ) : (
+          products.map((product, index) => (
+            <div key={index} className="product-card">
+              <div className="image-container">
+                <img src={product.image} alt={product.title} />
+              </div>
+              <Rating />
+              <h3>{product.title}</h3>
+              <div className="price">
+                <span className="original-price">{product.originalPrice}</span>
+                <span className="sale-price">{product.salePrice}</span>
+              </div>
             </div>
-            <Rating />
-            <h3>{product.title}</h3>
-            <div className="price">
-              <span className="original-price">{product.originalPrice}</span>
-              <span className="sale-price">{product.salePrice}</span>
-            </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </section>
   );

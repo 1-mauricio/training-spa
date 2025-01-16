@@ -7,8 +7,14 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor
 @Model(adaptables = Resource.class)
 public class FeaturedModel {
 
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String title;
 }

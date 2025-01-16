@@ -36,7 +36,7 @@ class Header extends Component {
                   </div>
                   <div className="auth">
                     <FaUser className="user-icon" />
-                    <span>Entre ou Cadastre-se</span>
+                    <span className='bold-header-actions'>Entre</span> ou <span className='bold-header-actions'>Cadastre-se</span>
                   </div>
                   <div className="cart">
                     <FaShoppingBag className="cart-icon" />
